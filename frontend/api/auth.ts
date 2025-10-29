@@ -1,8 +1,10 @@
 import { Auth } from "@/types/auth";
 import axios from "axios";
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3333";
+
 const instance = axios.create({
-    baseURL: "http://localhost:3333/auth",
+    baseURL: `${API_URL}/auth`,
 });
 
 export async function register(auth: Auth) {
