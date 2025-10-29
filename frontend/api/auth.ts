@@ -1,7 +1,7 @@
 import { Auth } from "@/types/auth";
 import axios from "axios";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3333";
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 const instance = axios.create({
     baseURL: `${API_URL}/auth`,
